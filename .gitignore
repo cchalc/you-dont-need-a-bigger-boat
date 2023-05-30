@@ -193,4 +193,4 @@ dmypy.json
 .meltano
 
 # go
-infra/vendor/*
+infra/vendor/
