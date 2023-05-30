@@ -187,6 +187,8 @@ dmypy.json
 # Databricks
 .databrickscfg
 .dbsqlclirc
+.notes.md
 
 # meltano
 .meltano
+
