@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-go@v3
       with:
         go-version: ${{ matrix.goVersion }}
-        cache: true
+        cache: false
 
     - name: Build
       run: go build -v ./infra/...
