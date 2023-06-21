@@ -1,19 +1,19 @@
-package infra
+package main
 
 import (
-  "context"
+	"context"
 
-  "github.com/databricks/databricks-sdk-go"
-  "github.com/databricks/databricks-sdk-go/service/compute"
+	"github.com/databricks/databricks-sdk-go"
+	"github.com/databricks/databricks-sdk-go/service/compute"
 )
 
 func main() {
-  w := databricks.Must(databricks.NewWorkspaceClient())
-  all, err := w.Clusters.ListAll(context.Background(), compute.ListClustersRequest{})
-  if err != nil {
-    panic(err)
-  }
-  for _, c := range all {
-    println(c.ClusterName)
-  }
+	w := databricks.Must(databricks.NewWorkspaceClient())
+	all, err := w.Clusters.ListAll(context.Background(), compute.ListClustersRequest{})
+	if err != nil {
+		panic(err)
+	}
+	for _, c := range all {
+		println(c.ClusterName)
+	}
 }
